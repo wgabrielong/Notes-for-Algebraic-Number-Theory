@@ -19,6 +19,41 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Marcus}{book}{}
+      \name{author}{1}{}{%
+        {{hash=cc9efffbae5cf53406359d5c2e377725}{%
+           family={Marcus},
+           familyi={M\bibinitperiod},
+           given={Daniel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Cham: Springer}%
+      }
+      \strng{namehash}{cc9efffbae5cf53406359d5c2e377725}
+      \strng{fullhash}{cc9efffbae5cf53406359d5c2e377725}
+      \strng{bibnamehash}{cc9efffbae5cf53406359d5c2e377725}
+      \strng{authorbibnamehash}{cc9efffbae5cf53406359d5c2e377725}
+      \strng{authornamehash}{cc9efffbae5cf53406359d5c2e377725}
+      \strng{authorfullhash}{cc9efffbae5cf53406359d5c2e377725}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd edition}
+      \field{isbn}{978-3-319-90232-6; 978-3-319-90233-3}
+      \field{issn}{0172-5939}
+      \field{series}{Universitext}
+      \field{title}{Number fields}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1007/978-3-319-90233-3
+      \endverb
+      \keyw{11-01,11Rxx,11R04,11R27,11R29,11R37,11R44}
+    \endentry
     \entry{Serre}{book}{}
       \name{author}{1}{}{%
         {{hash=523a41970d92b80420ca6d5307619da7}{%

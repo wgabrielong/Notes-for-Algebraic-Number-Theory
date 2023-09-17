@@ -224,13 +224,13 @@ This is \cite[Ch. 1, \S 1, Prop. 4]{Serre}.
   for some $b_{i}\in S^{-1}A$. Writing each $b_{i}=\frac{a_{i}}{s_{i}}$ for $a_{i}\in A, s_{i}\in S$, we can take $s=\prod_{i=0}^{n-1}s_{i}$ and multiply (\ref{eqn: dedekind domain TFAE}) by $s^{n}$ to yield 
   \small
   \begin{align*}
-    0 &= s^{n}x^{n}+a_{n-1}\left(s_{n-1}^{n-1}\prod_{0\leq i\leq n-2}s_{i}^{n}\right)x^{n-1}+\dots+a_{1}\left(s_{1}^{n-1}\prod_{0\leq i\leq n-1, i\neq 1}s_{i}^{n}\right)x+a_{0}\left(s_{0}^{n-1}\prod_{1\leq i\leq 0}s_{i}\right) \\
-    &= (sn)^{n} + a_{n-1}\left(\prod_{0\leq i\leq n-2}s_{i}\right)(sx)^{n-1}+\dots+a_{1}\left(s_{1}^{n-2}\prod_{0\leq i\leq n-1, i\neq 1}s_{i}^{n-1}\right)(sx)+a_{0}\left(s_{0}^{n-1}\prod_{1\leq i\leq 0}s_{i}\right)
+    0 &= s^{n}x^{n}+a_{n-1}\left(s_{n-1}^{n-1}\prod_{0\leq i\leq n-2}s_{i}^{n}\right)x^{n-1}+\dots+a_{1}\left(s_{1}^{n-1}\prod_{0\leq i\leq n-1, i\neq 1}s_{i}^{n}\right)x+a_{0}\left(s_{0}^{n-1}\prod_{1\leq i\leq 0}s_{i}^{n}\right) \\
+    &= (sn)^{n} + a_{n-1}\left(\prod_{0\leq i\leq n-2}s_{i}\right)(sx)^{n-1}+\dots+a_{1}\left(s_{1}^{n-2}\prod_{0\leq i\leq n-1, i\neq 1}s_{i}^{n-1}\right)(sx)+a_{0}\left(s_{0}^{n-1}\prod_{1\leq i\leq 0}s_{i}^{n}\right)
   \end{align*}
   \normalsize
   wherein $sx\in A$ and each 
   \small
-  $$a_{n-1}\left(\prod_{0\leq i\leq n-2}s_{i}\right), \dots, a_{1}\left(s_{1}^{n-2}\prod_{0\leq i\leq n-1, i\neq 1}s_{i}^{n-1}\right), a_{0}\left(s_{0}^{n-1}\prod_{1\leq i\leq 0}s_{i}\right)\in A.$$
+  $$a_{n-1}\left(\prod_{0\leq i\leq n-2}s_{i}\right), \dots, a_{1}\left(s_{1}^{n-2}\prod_{0\leq i\leq n-1, i\neq 1}s_{i}^{n-1}\right), a_{0}\left(s_{0}^{n-1}\prod_{1\leq i\leq 0}s_{i}^{n}\right)\in A.$$
   \normalsize
   so by $A$ being integrally closed we conclude $sx\in A$ and thus $x\in S^{-1}A$ as desired. 
 \end{proof}
@@ -250,7 +250,7 @@ One can also show that the property of being a Dedekind domain is preserved unde
   If $A$ is a Dedekind domain and $S$ a multiplicative subset of $A$, the localization $S^{-1}A$ is a Dedekind domain. 
 \end{proposition}
 \begin{proof}
-  
+  We show condition (b) in \Cref{thm: dedekind TFAE}. By hypothesis $A$ is a Dedekind domain so it is integrally closed and of Krull dimension at most 1. Since prime ideals of $S^{-1}A$ are those of $A$ not meeting $S$, $S^{-1}A$ is also of Krull dimension at most 1. One then applies the proof in the latter part of \Cref{thm: dedekind TFAE} to show integral closure. 
 \end{proof}
 Let $A$ be an integral domain and $K(A)$ its field of fractions. For $x\in K(A)$, we want to assign a valuation to $A$ with respect to some prime ideal $\wp$ of $A$. We make sense of this in terms of fractional ideals which provide a notion of multiplicative inverse for ideals. 
 \begin{definition}[Fractional Ideal]
@@ -266,7 +266,7 @@ In the case of Dedekind domainsm we can show that every ideal is invertible. Thi
   Let $A$ be a Dedekind domain. Every nonzero fractional ideal is invertible. 
 \end{proposition}
 \begin{proof}
-  
+  Let $A$ be a Dedekind domain and $I\subseteq A$ a fractional ideal. Let $J=\{x\in K|xI\subseteq A\}$. We have $IJ\subseteq A$. Suppose to the contrary that $IJ\subsetneq A$. The ideal $IJ$ is contained in some maximal ideal $\mfrak$ so localizing at $\mfrak$ we have $J_{\mfrak}=\{x\in K|x I_{\mfrak}\in A_{\mfrak}\}$, that is, the inverse of $I_{\mfrak}$ as fractional ideals of $A_{\mfrak}$. In particular, observe $(IJ)_{\mfrak}=I_{\mfrak}J_{\mfrak}=A_{\mfrak}$, a contradiction as $IJ\subseteq\mfrak$. 
 \end{proof}
 We apply this to the factorization of ideals. 
 \begin{theorem}[Factorization in Dedekind Domains]
@@ -274,8 +274,13 @@ We apply this to the factorization of ideals.
   $$I=\prod_{\wp_{i}\text{ prime}}\wp_{i}^{e_{i}}$$
   only finitely many $e_{i}$ nonzero. 
 \end{theorem}
+The proof of uniqueness was given in class. For existence, we adapt the proof from \cite[\S 3, Thm. 14]{Marcus}.
 \begin{proof}
-  
+  (Existence) Suppose to the contrary that there is some collection of ideals not admitting a decomposition into prime dieals as above. Let $\qfrak$ be the maximal among such ideals not admitting a decomposition into primes where $\qfrak\neq A$ as $A$ is the empty product. Let $\pfrak$ be a prime ideal of $A$ containing $\qfrak$ and note that $\pfrak=\qfrak\afrak$ for some ideal $\afrak\subseteq A$ since $\qfrak\subseteq\pfrak$ implies $\pfrak|\qfrak$. But $\afrak$ contains $\qfrak$ so $\qfrak|\afrak$ and in fact $\qfrak\subsetneq\afrak$ as otherwise $\afrak=\qfrak$ and $\qfrak=\pfrak\qfrak$ implying $A=\pfrak$ a contradiction as $\pfrak$ was taken to be prime and hence proper. Using $\qfrak\subsetneq\afrak$ we have $\afrak$ is a product of primes and so is $\qfrak$, a contradiction. 
+  \\\\
+  (Uniqueness) Let $I\subseteq A$ be an ideal admitting a decomposition by 
+  $$I=\prod_{\wp_{i}\text{ prime}}\wp_{i}^{e_{i}}.$$
+  For each $\wp_{i}$, $I_{\wp_{i}}$ is an ideal in the DVR $A_{\wp_{i}}$ and $e_{i}=v_{\wp_{i}}(x)$ for $x$ a generator of $I_{\wp_{i}}$ in $A_{\wp_{i}}$.
 \end{proof}
 Returning to integrality, we prove the following statement that we will later use. 
 \begin{proposition}
@@ -283,7 +288,11 @@ Returning to integrality, we prove the following statement that we will later us
 \end{proposition}
 Note that $A[b_{1},\dots,b_{n}]$ is finitely generated as an $A$-algebra, we are asking for something stronger. 
 \begin{proof}
-  
+  $(\Longrightarrow)$ By induction, it suffices to show that if $b\in B$ is integral over $A$ the ring $A[b]$ is finitely generated as an $A$-module. Suppose $b\in B$ is integral over $A$ so 
+  $$b^{n}+a_{n-1}b^{n-1}+\dots+a_{1}b+a_{0}=0$$
+  for some $a_{0}, a_{1},\dots, a_{n-1}\in A$. Thus $A[b]$ is generated by $1, b, \dots,b^{n-1}$ as an $A$-module, that is, finitely generated as an $A$-module. 
+  \\\\
+  $(\Longleftarrow)$ Similarly, by induction it suffices to consider the case of $b\in B$. Suppose $A[b]$ is finitely generated as an $A$-module, say by $1,b,\dots,b^{n-1}$. We can then write $b^{n}$ as some $A$-linear combination and rearranging this equation we yield the monic polynomial in $A$ which $b$ satisfies. 
 \end{proof}
 \newpage
 \printbibliography

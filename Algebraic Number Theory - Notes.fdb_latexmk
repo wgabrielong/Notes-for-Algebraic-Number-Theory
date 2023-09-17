@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber Algebraic Number Theory - Notes"] 1694889875 "Algebraic Number Theory - Notes.bcf" "Algebraic Number Theory - Notes.bbl" "Algebraic Number Theory - Notes" 1694890034 0
-  "./refs.bib" 1694105880 881 84086b28fb5d6897d4db9516c803c68b ""
-  "Algebraic Number Theory - Notes.bcf" 1694890033 107875 4b39bcbefac4f70219a53ba800565ad3 "pdflatex"
+["biber Algebraic Number Theory - Notes"] 1694986170 "Algebraic Number Theory - Notes.bcf" "Algebraic Number Theory - Notes.bbl" "Algebraic Number Theory - Notes" 1694986182 0
+  "./refs.bib" 1694985494 1324 f156e7d30c549972f02b024f1ecc2dd1 ""
+  "Algebraic Number Theory - Notes.bcf" 1694986181 107936 5defa28af532a6754c5e4c29f96ed453 "pdflatex"
   (generated)
   "Algebraic Number Theory - Notes.bbl"
   "Algebraic Number Theory - Notes.blg"
   (rewritten before read)
-["pdflatex"] 1694890030 "c:/Users/bullg/OneDrive - Bowdoin College/2023 Fall/MATH 223A - Algebraic Number Theory I/Notes-for-Algebraic-Number-Theory/Algebraic Number Theory - Notes.tex" "Algebraic Number Theory - Notes.pdf" "Algebraic Number Theory - Notes" 1694890034 0
-  "Algebraic Number Theory - Notes.aux" 1694890033 2602 2622bcf34f11c81cb5710e59ea2a7c55 "pdflatex"
-  "Algebraic Number Theory - Notes.bbl" 1694889880 1795 19c878eb84d7f60e5a4e42d0102cc6a1 "biber Algebraic Number Theory - Notes"
-  "Algebraic Number Theory - Notes.out" 1694890033 671 be1a52076491eb93624719278d010bb8 "pdflatex"
-  "Algebraic Number Theory - Notes.run.xml" 1694890033 2502 d89a84bdbf3aefe847e7bb7cd2e33a2c "pdflatex"
-  "Algebraic Number Theory - Notes.tex" 1694890029 20967 e596b331b8de8f8e9cd2a152976ac631 ""
-  "Algebraic Number Theory - Notes.toc" 1694890033 327 fa13aa9d2258db5cde00542ff69e2259 "pdflatex"
-  "c:/Users/bullg/OneDrive - Bowdoin College/2023 Fall/MATH 223A - Algebraic Number Theory I/Notes-for-Algebraic-Number-Theory/Algebraic Number Theory - Notes.tex" 1694890029 20967 e596b331b8de8f8e9cd2a152976ac631 ""
+["pdflatex"] 1694986178 "c:/Users/bullg/OneDrive - Bowdoin College/2023 Fall/MATH 223A - Algebraic Number Theory I/Notes-for-Algebraic-Number-Theory/Algebraic Number Theory - Notes.tex" "Algebraic Number Theory - Notes.pdf" "Algebraic Number Theory - Notes" 1694986182 0
+  "Algebraic Number Theory - Notes.aux" 1694986181 2720 232005499a92531d4eab3d586d0bd20c "pdflatex"
+  "Algebraic Number Theory - Notes.bbl" 1694986174 3122 5c4a8d6221e4c47f84d20ab4d2369b1a "biber Algebraic Number Theory - Notes"
+  "Algebraic Number Theory - Notes.out" 1694986181 671 be1a52076491eb93624719278d010bb8 "pdflatex"
+  "Algebraic Number Theory - Notes.run.xml" 1694986181 2502 d89a84bdbf3aefe847e7bb7cd2e33a2c "pdflatex"
+  "Algebraic Number Theory - Notes.tex" 1694986169 23784 58abc5e02e44a9ae45b328df0f184767 ""
+  "Algebraic Number Theory - Notes.toc" 1694986181 327 1d7d3536dd85b6e14586c61980b1fe22 "pdflatex"
+  "c:/Users/bullg/OneDrive - Bowdoin College/2023 Fall/MATH 223A - Algebraic Number Theory I/Notes-for-Algebraic-Number-Theory/Algebraic Number Theory - Notes.tex" 1694986169 23784 58abc5e02e44a9ae45b328df0f184767 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1681144982 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1681145940 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1681145551 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -49,6 +49,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm" 1681144967 1116 25a7bf822c58caf309a702ef79f4afbb ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1681144967 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti8.tfm" 1681144967 1504 1747189e0441d1c18f3ea56fafc1c480 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1681144967 768 1321e9409b4137d6fb428ac9dc956269 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm" 1681144967 768 d7b9a2629a0c353102ad947dc9221d49 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1681148473 688 37338d6ab346c2f1466b29e195316aa4 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1681148473 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -72,6 +73,7 @@
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1681144236 32442 c975af247b6702f7ca0c299af3616b80 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1681144236 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb" 1681144236 35660 fb24af7afbadb71801619f1415838111 ""
+  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1681144236 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb" 1681144236 24287 6b803fa9eb1ddff9112e00519b09dd9e ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb" 1681144236 30212 f7062d6da71d1ec66ffb8906891648f7 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1681144236 21098 d4aee7c0aac232caac5688b586b9363c ""
