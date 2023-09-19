@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber Algebraic Number Theory - Notes"] 1694986170 "Algebraic Number Theory - Notes.bcf" "Algebraic Number Theory - Notes.bbl" "Algebraic Number Theory - Notes" 1694986182 0
-  "./refs.bib" 1694985494 1324 f156e7d30c549972f02b024f1ecc2dd1 ""
-  "Algebraic Number Theory - Notes.bcf" 1694986181 107936 5defa28af532a6754c5e4c29f96ed453 "pdflatex"
+["biber Algebraic Number Theory - Notes"] 0 "Algebraic Number Theory - Notes.bcf" "Algebraic Number Theory - Notes.bbl" "Algebraic Number Theory - Notes" 1695085446 -1
+  "./refs.bib" 1695083188 1528 0fb4069dd9404d4f349c8753f661a87d ""
+  "Algebraic Number Theory - Notes.bcf" 1695085445 108065 fa05a4c64954819fdeab9f0b0da2e472 "pdflatex"
   (generated)
   "Algebraic Number Theory - Notes.bbl"
   "Algebraic Number Theory - Notes.blg"
   (rewritten before read)
-["pdflatex"] 1694986178 "c:/Users/bullg/OneDrive - Bowdoin College/2023 Fall/MATH 223A - Algebraic Number Theory I/Notes-for-Algebraic-Number-Theory/Algebraic Number Theory - Notes.tex" "Algebraic Number Theory - Notes.pdf" "Algebraic Number Theory - Notes" 1694986182 0
-  "Algebraic Number Theory - Notes.aux" 1694986181 2720 232005499a92531d4eab3d586d0bd20c "pdflatex"
-  "Algebraic Number Theory - Notes.bbl" 1694986174 3122 5c4a8d6221e4c47f84d20ab4d2369b1a "biber Algebraic Number Theory - Notes"
-  "Algebraic Number Theory - Notes.out" 1694986181 671 be1a52076491eb93624719278d010bb8 "pdflatex"
-  "Algebraic Number Theory - Notes.run.xml" 1694986181 2502 d89a84bdbf3aefe847e7bb7cd2e33a2c "pdflatex"
-  "Algebraic Number Theory - Notes.tex" 1694986169 23784 58abc5e02e44a9ae45b328df0f184767 ""
-  "Algebraic Number Theory - Notes.toc" 1694986181 327 1d7d3536dd85b6e14586c61980b1fe22 "pdflatex"
-  "c:/Users/bullg/OneDrive - Bowdoin College/2023 Fall/MATH 223A - Algebraic Number Theory I/Notes-for-Algebraic-Number-Theory/Algebraic Number Theory - Notes.tex" 1694986169 23784 58abc5e02e44a9ae45b328df0f184767 ""
+["pdflatex"] 1695085441 "c:/Users/bullg/OneDrive - Bowdoin College/2023 Fall/MATH 223A - Algebraic Number Theory I/Notes-for-Algebraic-Number-Theory/Algebraic Number Theory - Notes.tex" "Algebraic Number Theory - Notes.pdf" "Algebraic Number Theory - Notes" 1695085446 0
+  "Algebraic Number Theory - Notes.aux" 1695085445 3706 6c1c5eecc940d28e5654e1e47df2c236 "pdflatex"
+  "Algebraic Number Theory - Notes.bbl" 1695085352 4087 2a226e25b23ba934ec02a52a9e2bc9cb "biber Algebraic Number Theory - Notes"
+  "Algebraic Number Theory - Notes.out" 1695085445 905 d3a3e5bbe27387ee6b0d27478114acc3 "pdflatex"
+  "Algebraic Number Theory - Notes.run.xml" 1695085445 2502 d89a84bdbf3aefe847e7bb7cd2e33a2c "pdflatex"
+  "Algebraic Number Theory - Notes.tex" 1695085440 32021 f09547952143c538b60e3bb035ae3a5b ""
+  "Algebraic Number Theory - Notes.toc" 1695085445 420 6cb09303652c0ad34103ca18fa34ad9e "pdflatex"
+  "c:/Users/bullg/OneDrive - Bowdoin College/2023 Fall/MATH 223A - Algebraic Number Theory I/Notes-for-Algebraic-Number-Theory/Algebraic Number Theory - Notes.tex" 1695085440 32021 f09547952143c538b60e3bb035ae3a5b ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1681144982 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1681145940 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1681145551 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -255,7 +255,7 @@
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1681151582 7885515 4edb96652e45d78da49c70adaf423337 ""
   "c:/texlive/2023/texmf.cnf" 1681149909 713 e69b156964470283e0530f5060668171 ""
   "quiver.sty" 1675117568 1606 ac24526cc82038afe47d6f803f11170f ""
-  "shortcuts.tex" 1694480172 2500 504a200e6121a2fd329f45ef82ac1830 ""
+  "shortcuts.tex" 1695084978 2657 90b6e5030415594185ad1a965a18738d ""
   (generated)
   "Algebraic Number Theory - Notes.aux"
   "Algebraic Number Theory - Notes.bcf"
