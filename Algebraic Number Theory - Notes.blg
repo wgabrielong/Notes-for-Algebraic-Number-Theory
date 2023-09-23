@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Algebraic Number Theory - Notes.blg'
+[162] biber-MSWIN64:340> INFO - === 
+[213] Biber.pm:419> INFO - Reading 'Algebraic Number Theory - Notes.bcf'
+[384] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
+[412] Biber.pm:4419> INFO - Processing section 0
+[430] Biber.pm:4610> INFO - Looking for bibtex file 'refs.bib' for section 0
+[490] bibtex.pm:1713> INFO - LaTeX decoding ...
+[509] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[601] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[602] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[602] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[602] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[607] bbl.pm:660> INFO - Writing 'Algebraic Number Theory - Notes.bbl' with encoding 'UTF-8'
+[609] bbl.pm:763> INFO - Output to Algebraic Number Theory - Notes.bbl
+[609] Biber.pm:131> WARN - ISBN '978-3-319-90232-6; 978-3-319-90233-3' in entry 'Marcus' is invalid - run biber with '--validate_datamodel' for details.
+[609] Biber.pm:133> INFO - WARNINGS: 1

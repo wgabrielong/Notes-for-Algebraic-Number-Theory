@@ -2,4 +2,4 @@
 \contentsline {section}{\tocsection {}{1}{Lecture 1 -- 11th September 2023}}{1}{section.1}%
 \contentsline {section}{\tocsection {}{2}{Lecture 2 -- 13th September 2023}}{3}{section.2}%
 \contentsline {section}{\tocsection {}{3}{Lecture 3 -- 18th September 2023}}{8}{section.3}%
-\contentsline {section}{\tocsection {}{}{References}}{10}{section*.3}%
+\contentsline {section}{\tocsection {}{}{References}}{11}{section*.3}%
