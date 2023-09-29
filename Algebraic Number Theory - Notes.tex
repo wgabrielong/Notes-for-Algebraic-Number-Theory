@@ -43,7 +43,7 @@
 \urladdr{https://wgabrielong.github.io/}
 \maketitle
 \section*{Preliminaries}
-These notes roughly correspond to the course \textbf{MATH 223A: Algebraic Number Theory} taught by Prof. Melanie Wood at Harvard University in the Fall 2023 semester. These notes are \LaTeX-ed after the fact with significant alteration and are subject to misinterpretation and mistranscription. Use with caution. Any errors are undoubtedly my own and any virtues that could be ascribed to these notes ought be attributed to the instructor and not the typist. 
+These notes roughly correspond to the course \textbf{MATH 223A: Algebraic Number Theory} taught by Prof. Melanie Wood at Harvard University in the Fall 2023 semester. These notes are \LaTeX-ed after the fact with significant alteration and are subject to misinterpretation and mistranscription. Use with caution. Any errors are undoubtedly my own and any virtues that could be ascribed to these notes ought be attributed to the instructor and not the typist. A special thanks goes to Matt King, the official note taker for the course, for his notes have greatly improved my own. 
 \tableofcontents
 \section{Lecture 1 -- 11th September 2023}
 This is a first graduate course in algebraic number theory. We will study local fields. 
@@ -60,7 +60,7 @@ One's first study of number theory seeks to treat $\ZZ\subseteq\QQ$, but there i
   The field $\FF_{q}(t)$ is the field of rational functions of $\PP^{1}_{\FF_{q}}$. 
 \end{example}
 This is an example of the function field analogy, drawing connections between geometry over finite fields $\FF_{q}$ and $\CC$. In fact, function fields and number fields are the only examples of global fields. This was first studied in the 20th century through the study of class field theory, field extensions with Abelian Galois group, that saw similar methods applied to number fields and function fields of $C_{/\FF_{q}}$. Artin-Whaples axiomatized what was special about function fields and number fields by defining global fields and valuations. This led to a new approach to proving Dirichlet's unit theorem in the 1940s. Valuations will be our starting point for this class. 
-\begin{definition}[Valuation]
+\begin{definition}[Valuation]\label{def:valuation}
   Let $K$ be a field. A valuation on $K$ is a function $|\cdot|:K\to\RR$ such that: 
   \begin{enumerate}[label=(\alph*)]
     \item $|x|\geq0$ for all $x\in K$ and $|x|=0$ if and only if $x=0$, 
@@ -496,6 +496,96 @@ In the setting of non-Galois extensions, we can take the Galois closure and use 
   \end{tikzcd}$$
   we have $D_{\wp}(M/L)=D_{\wp}(M/K)\cap\Gal(M/L)$ and $T_{\wp}(M/L)=T_{\wp}(M/K)\cap\Gal(M/L)$ for $p\subseteq A, \pfrak\subseteq B, \wp\subseteq C$ and $\wp|\pfrak, \pfrak|p$. 
 \end{proposition}
+\section{Lecture 5 -- 25th September 2023}
+Let $A$ be a Dedekind domain with fraction field $K$ and $\pfrak\subseteq A$ a prime ideal. Note that $A$ and $A_{\pfrak}$ have the same fraction field $K$ which has all discrete valuations from the primes of $A$. We want to pass to a situation where we completely lose information about primes other than $\pfrak\subseteq A$. We do so via completion. 
+\\\\
+Let $K$ be a field with discrete valuation $v$ and discrete valuation ring $A$. The ring $A$ has an absolute value by taking $|x|=c^{v(x)}$ for $0<c<1$ setting $|0|=0$. Recall that by \Cref{def:valuation}, we have $|x+y|\leq|x|+|y|$, but the valuation with respect to a prime ideal satisfies a much stronger condition. 
+\begin{definition}[Non-Archimedian Valuation]\label{def:nonarchimedian valuation}
+  Let $K$ be a field. A non-Archimedian valuation on $K$ is a function $|\cdot|:K\to\RR$ such that:
+  \begin{enumerate}[label=(\alph*)]
+    \item $|x|\geq0$ for all $x\in K$ and $|x|=0$ if and only if $x=0$, 
+    \item $|xy|=|x|\cdot|y|$, 
+    \item and $|x+y|\leq\max\{|x|,|y|\}$. 
+  \end{enumerate}
+\end{definition}
+\begin{remark}
+  In Serre's text, non-Archimedian valuations are known as ultrametrics. 
+\end{remark}
+\begin{remark}
+  The standard absolute values on number fields, $\RR$, and $\CC$ are Archimedian absolute values. 
+\end{remark}
+For any field $K$ with an absolute value $|\cdot|$, we have a completion $\widehat{K}$ with respect to the metric $d(x,y)=|x-y|$. These are equivalence classes of Cauchy sequences $\{a_{n}\}_{n\in\NN}$ with $a_{n}\in K$ such that for every $\varepsilon>0$, there exists $N\in \NN$ such that for $n,m\geq N$, $|a_{m}-a_{n}|<\varepsilon$. Two Cauchy sequences are equivalent if they get arbitrarily close together, as in the case of real analysis. We can define $\widehat{K}$ the completion of $K$ with elements Cauchy sequences with the pointwise operations. The additive and multiplicative identities are given by the constant sequences $\{0\}_{n\in\NN}$ and $\{1\}_{n\in\NN}$, respectively. Indeed, this is complete with respect to the absolute value $|\{a_{n}\}_{n\in\NN}|=\lim_{n\to\infty}|a_{n}|$. 
+\begin{example}
+  Let $K=\QQ$ and $|\cdot|$ the usual (Archimedian) absolute value. We have $\widehat{K}=\RR$. 
+\end{example}
+\begin{example}
+  Let $|\cdot|$ be an absolute value arising from a discrete valuation $v$. We can define $\widehat{v}(x)$ such that for $x\in\widehat{K}$, $|x|=c^{\widehat{v}(x)}$ where $0<c<1$. Note that $c^{\ZZ}$ is discrete so we have $\overline{v}(x)\in\ZZ$ for all $x\in\widehat{K}$ so $\widehat{v}$ is a discrete valuation on $\widehat{K}$ and $\widehat{A}$ is the discrete valuation ring of $\widehat{K}$. In fact, $\widehat{A}$ is the topological closure of $A$ in $\widehat{K}$. 
+\end{example}
+\begin{definition}[Complete DVR]\label{def: complete DVR}
+  Let $\widehat{K}$ be a field complete with respect to the metric induced by its valuation. The discrete valuation ring associated to $\widehat{K}$ is a complete discrete valuation ring. 
+\end{definition}
+One can also verify that $\widehat{A}$ can be realized as a projective limit 
+$$\widehat{A}=\varprojlim_{n}A/(\pi^{n})=\left\{(r_{n})_{n\in\NN}:r_{n}\in A/(\pi^{n}) \text{ s.t. for }m>n, \overline{r_{m}}\equiv r_{n}\pmod{(\pi^{n})}\right\}.$$
+Note that in the $p$-adic valuation, things are small if they are divisible by larger powers of $p$. This definition of the completion as inverse limit agrees with that notion. One can verify that $\pi$ is a uniformizer of $\widehat{A}$ and $\widehat{A}_{(\pi)}=\widehat{K}$. 
+\begin{proposition}
+  Let $S$ be a choice of representatives of $A/(\pi)$ in $A$. Every element of the completion $a\in\widehat{A}$ can be written unqiuely as a convergent power series $a=\sum_{n=0}^{\infty}s_{n}\pi^{n}$ with $s_{n}\in S$
+  and every element of the complete field $x\in\widehat{K}$ can be written uniquely as a convergent Laurent series
+  $$\sum_{n=m}^{\infty}s_{n}\pi^{n}, m\in\ZZ_{\leq0}.$$
+\end{proposition}
+\begin{example}
+  Let $K=\QQ, A=\ZZ$ and $v$ the $p$-adic valuation with respect to some positive prime $p$. $\widehat{K}=\QQ_{p}$ the $p$-adic numbers with complete discrete valuation ring $\widehat{A}=\ZZ_{p}$, the $p$-adic integers. 
+\end{example}
+\begin{example}
+  Let $K=\FF_{q}(t)$ and $v$ be the $t$-adic valuation, with respect to the prime ideal $(t)$. We have $\widehat{K}=\FF_{q}((t))$ the Laurent series in $t$ and $\widehat{A}=\FF_{q}[[t]]$ the power series in $t$. We can choose $S$ to be elements $\FF_{q}\subseteq\FF_{q}[t]$ so $S$ is an additive and multiplicative monoid and $A/(\pi)=\FF_{q}\subseteq K$. 
+\end{example}
+Let $A$ be a Dedekind domain with fraction field $K$, $\pfrak\subseteq A$ prime, and $v_{\pfrak}$ the valuation with respect to the prime ideal $\pfrak$. We write $K_{\pfrak}$ be the completion of $K$ with respect to the norm induced by the valuation $v_{\pfrak}$. We have $A_{\pfrak}\subseteq\widehat{A}\subseteq\widehat{K}$ taking $A_{\pfrak}$ to be constant Cauchy sequences. Note that $\widehat{A},\widehat{K}$ are much larger than $A_{\pfrak}$ in the sense that they have solutions to many more equations. These are examples of local fields. \\\\
+We return to the setting of extensions. 
+\begin{proposition}
+  Let $K$ be a field with discrete valuation $v$ and valuation ring $A$ with $K$ complete with respect to the discrete valuation. If further $A$ is a Dedekind domain with fraction field $K$, $L/K$ a finite field extension, and $B$ the integral closure of $A$ in $L$, then $B$ is a discrete valuation ring, a free $A$-module of rank $[L:K]$, and $L$ is complete with respect to the metric from $B$'s valuation. 
+\end{proposition}
+\begin{proof}
+  We show that $B$ is a DVR. The remainder of the proof can be found in \cite[Ch. 2, \S 2, Proposition 3]{Serre}. \\\\
+  Let $\wp_{i}$ be the primes of $B$ with valuations $w_{i}$. Note that $\wp_{i}\cap A=(\pi)$ as $(\pi)$ is the only prime ideal of $A$ a DVR. By the equivalence of norms on a finite dimensional vector space over a complete field, each of the $w_{i}$s induces the same topology on $L$. Suppose to the contrary that $B$ is not a DVR, so $w_{1},w_{2}$ are not the same valuation. Pick some $x\in B$ such that $w_{1}(x)>0, w_{2}(x)=0$. In the topology induced by $w_{1}$ on $L$, $\lim_{n\to\infty}x^{n}=0$ but the limit of this sequence, if it exists, would not converge to 0 in the $w_{2}$ topology. This allows us to distinguish between the primes by their associated valuations, a contradiction, so there is only one nonzero prime of $B$ showing that $B$ is a DVR. 
+\end{proof}
+\begin{remark}
+  Note that we required the hypothesis that $K$ complete with respect to the valuation. If $A$ were a Dedekind domain with more than one prime ideal, $A_{\pfrak}$ would be a DVR with the same fraction field as $A$. The integral closure $B$ of $A_{\pfrak}$ in $L$ of $L/K$ a finite extension of fields has primes $\wp_{i}|\pfrak$ and if there is more than one such $\wp_{i}$ then $B$ is not a DVR. 
+\end{remark}
+\begin{remark}
+  In the case of a complete DVR, we need not assume $L/K$ is separable. We use Serre's Hypothesis F where $B$ is finitely generated as an $A$-module where $\sum e_{i}f_{i}=[L:K]$ but in the setup above $i=1$ so $[L:K]=ef$ and there is no splitting of primes. 
+\end{remark}
+This allows us to deduce the following connection between valuations on $K$ and $L$. 
+\begin{corollary}
+  For all $x\in L$, $w(x)=\frac{1}{f}v(\Nm_{L/K}(x))$. 
+\end{corollary}
+\begin{proof}
+  This is \cite[Ch. 2, \S 2, Corr. 4]{Serre}. See the discussion following \cite[Ch. 2, \S 2, Proposition 3]{Serre}.
+\end{proof}
+We return to the setting of extensions of Dedekind domains. Let $A$ be a DVR with fraction field $K$, $L/K$ a finite extension of fields, and $B$ the integral closure of $A$ in $L$. The ring $B$ is a finitely generated $A$-module, but $K$ need note be complete with respect to the metric induced by the discrete valuation. Let $\pfrak$ be a nonzero prime ideal of $A$ and $\wp_{i}\subseteq B$ the primes lying over $\pfrak$. For $x\in K$, we have a valuation $v_{\wp_{i}}$ on $L$ by $e_{i}v_{\pfrak}(x)$, where we say $v_{\wp_{i}}$ prolongs the valuation $v_{\pfrak}$ to $L$ with index $e_{i}$. 
+\begin{proposition}
+  Let $A$ be a DVR with fraction field $K$, $\pfrak\subseteq A$ prime nonzero, $L/K$ a finite extension of fields, and $B$ the integral closure of $A$ in $L$. If $w$ is a valuation on $L$ prolonging $v_{\pfrak}$, then $w=v_{\wp}$ for some $\wp|\pfrak$. 
+\end{proposition}
+\begin{proof}
+  Let $W$ be the DVR associated to $w$ with maximal ideal $\mfrak$, so $W$ is integrally closed with fraction field $L$. Since $w$ prolongs $v_{\pfrak}$, $A\subseteq W$ and since $W$ is integrally closed, $B\subseteq W$. Let $\wp=\mfrak\cap B$ and note $\wp\cap A=\pfrak$ so $B_{\wp}\subseteq W$ since the denominators outside $\wp$ were outside $\mfrak$. If $W$ contained something with negative $v_{\wp}$ valuation, then $W=L$ a contradiction, so $W=B_{\wp}$ from which it follows that the valuations agree. 
+\end{proof}
+Let $A$ be a Dedekind domain with fraction field $K$. For $\pfrak\subseteq A$, denote $v_{\pfrak}$ the associated valuation and $\widehat{K}$ the completion of $K$ with respect to the metric induced by $v_{\pfrak}$. Let $L/K$ be a finite extension of fields and $B$ the integral closure of $A$ in $L$. For each $\wp_{i}|\pfrak$, let $\widehat{L_{i}}$ be the completion of $L$ with respect to the metric $v_{\wp_{i}}$ and $\widehat{B_{i}}$ the valuation ring associated to $\widehat{L_{i}}$. Note that from $L$'s point of view, it can't see that all the $\wp_{i}$ lie over the same $\pfrak$. 
+\begin{proposition}\label{prop: degree and splitting of completions}
+  Let $A$ be a Dedekind domain with fraction field $K$, $\pfrak\subseteq A$ prime nonzero, $L/K$ finite, and $B$ the integral closure of $A$ in $L$. If $\widehat{L_{i}}$ is the completion of $L$ with respect to the metric $v_{\wp_{i}}$ for $\wp_{i}|\pfrak$ and $\widehat{B_{i}}$ the associated valuation rings then 
+  \begin{enumerate}[label=(\alph*)]
+    \item $[\widehat{L_{i}}:K]=e_{i}f_{\wp_{i}}$, 
+    \item $L\otimes_{K}\widehat{K}=L\otimes_{K} K_{\pfrak}=\prod_{i}\widehat{L_{i}}$, 
+    \item and $B\otimes_{A}\widehat{A}\cong\prod_{i}\widehat{B_{i}}$. 
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  This is \cite[Ch. 2, \S 3, Thm. 1]{Serre} for (a) and (b), and \cite[Ch. 2, \S 3, Prop. 4]{Serre} for (c). 
+\end{proof}
+Of note here is (b), which states that the splitting of primes corresponds to the splitting of the algebra into fields. 
+\begin{corollary}
+  Assume the conditions of \Cref{prop: degree and splitting of completions}. If further $L/K$ is Galois and $D_{\wp_{i}}$ the decomposition group of $\wp_{i}|\pfrak$, then $\widehat{L_{i}}/\widehat{K}$ is Galois with Galois group $D_{\wp_{i}}$. 
+\end{corollary}
+\begin{proof}
+  The action of $D_{\wp_{i}}$ extends by continuity to $\widehat{L_{i}}$ giving $e_{i}f_{\wp_{i}}=[\widehat{L_{i}}:\widehat{K}]$ automorphisms. 
+\end{proof}
 \newpage
 \printbibliography
 \end{document}
