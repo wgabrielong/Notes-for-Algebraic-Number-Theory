@@ -586,6 +586,102 @@ Of note here is (b), which states that the splitting of primes corresponds to th
 \begin{proof}
   The action of $D_{\wp_{i}}$ extends by continuity to $\widehat{L_{i}}$ giving $e_{i}f_{\wp_{i}}=[\widehat{L_{i}}:\widehat{K}]$ automorphisms. 
 \end{proof}
+\section{Lecture 6 -- 27th September 2023}
+We have previously discussed discrete valuation rings. Today we will focus on one important property, Hensel's lemma. 
+\begin{lemma}[Hensel I]\label{lem: Hensel I}
+  Let $K$ be a complete field with discrete valuation $v$ and $A$ its discrete valuation ring. If $f\in A[x]$ and $a_{0}\in A$ such that $\overline{a_{0}}$ is a simple root of $\overline{f}\pmod{(\pi)}$ then there is a unique root $a\in A$ of $f$ congruent to $\overline{a_{0}}\pmod{(\pi)}$. 
+\end{lemma}
+The lemma states that if $f$ has a solution modulo $(\pi)$, that solution can be lifted to a solution of $f$ in $A$ itself. This is a very strong statement where we make great use of the characteristics of the non-Archimedian metric. As opposed to the Archimedian setting, Newton's method works fantastically in the $p$-adic topology. 
+\begin{proof}[Proof of \Cref{lem: Hensel I}]
+  We will construct a Cauchy sequence $\{a_{n}\}_{n\in\NN}$ of elements in $A$ such that $f(a_{n})$ is a root mod $(\pi^{n+1})$ whose limit is $a$. We will then show that $a_{n}$ is unique mod $(\pi^{n+1})$ given the conditions above. 
+  \\\\
+  Suppose we have $a_{0}\in A$ such that $\overline{a_{0}}$ is a simple root of $f$ modulo $(\pi)$ and set $a_{n+1}$ to be $a_{n}-\frac{f(a_{n})}{f'(a_{n})}$ where $f'(x)$ is the formal derivative of the polynomial $f$. Note that $f'(a_{n})\not\equiv0\pmod{(\pi)}$. If so, we write $\overline{f}=(x-a_{0})\overline{g}$ mod $(\pi)$ and by the product rule we see that $\overline{f}'=\overline{g}+(x-\overline{a_{0}})\overline{g}$ so if $\overline{a_{0}}$ were a root of $\overline{f}'$, it would be a root of $\overline{g}$ implying that it was not a simple root of $f$. 
+  \\\\
+  Thus $v(f'(a_{0}))=0$, that is $f'(a_{0})\in A^{\times}$ and $a_{n+1}=a_{n}+\frac{f(a_{n})}{f'(a_{n})}\in A$. Recalling the binomial expansion, we write $f(x+y)=f(x)+y f'(x)+y^{2}A[x,y]$ so in our expression we have 
+  $$f(a_{n+1})=f\left(a_{n}-\frac{f(a_{n})}{f'(a_{n})}\right)=f(a_{n})-\left(\frac{f(a_{n})}{f'(a_{n})}\right)f'(a_{n})+\dots$$
+  where we have that the trailing terms have valuations at least 
+  $$v\left(\left(\frac{f(a_{n})}{f'(a_{n})}\right)^{2}\right)\geq 2\cdot v(f(a_{n}))\geq 2(n+1)\geq n+2$$
+  so $f(a_{n+1})\equiv 0\pmod{(\pi^{n+2})}$ demonstrating existence of the Cauchy sequence. 
+  \\\\
+  To demonstrate uniqueness, assume that $a_{n+1}$ is unqiue modulo $(\pi^{n+1})$ so if $f(a_{n}+h\pi^{n+1})=0$ then using our expansion above we have 
+  $$f(a_{n})+h\pi^{n+1}f'(a_{n})+\dots$$
+  where the trailing terms have valuation at least $n+2$ which determines $h$ modulo $(\pi)$ implying the uniqueness of $a_{n+1}$ modulo $(\pi^{n+2})$. This implies that the sequence is Cauchy, and taking $a=\lim_{n\to\infty}a_{n}$, we have $f(a)=0$ and $a$ is unique since each $a_{n}$ is determined uniquely modulo $(\pi^{n})$ for all $n$. 
+\end{proof}
+Note that Hensel's lemma comes in many forms and can be made more general in at least two ways which we now state. 
+\begin{lemma}[Hensel, II]\label{lem: Hensel II}
+  Let $f\in A[x]$ and $a_{0}\in A$ such that $\overline{a_{0}}$ is a simple root of $\overline{f}\pmod{(\pi)}$. If $v(f(a_{0}))>2\cdot v(f'(a_{0}))$ then there is a root $a\in A$ of $f(x)$. 
+\end{lemma}
+\begin{lemma}[Hensel, III]\label{lem: Hensel III}
+  Let $f\in A[x]$ be a monic polynomial. If $\overline{f}$ factors as $g_{0}h_{0}$ for $g_{0},h_{0}\in (A/(\pi))[x]$ with $g_{0},h_{0}$ monic and relatively prime, then $f=gh$ for $g,h\in A[x]$ such that $\overline{g}=g_{0}, \overline{h}=h_{0}$. 
+\end{lemma}
+There is also a version that implies \Cref{lem: Hensel I,lem: Hensel II,lem: Hensel III} all together. Furthermore, $f$ need not be monic as stated in the version of \cite[Ch. 2, Thm. 4.6]{Neukirch}. Hensel's lemma is a very extensive statement stating that the vast majority of the time the factorization of polynomials in a complete DVR is determined by its factorization in the residue field. 
+\begin{example}
+  Consider $x^{p-1}-1\in \ZZ_{p}[x]$ a polynomial over the $p$-adic integers. THis factors into distinct linear factors $(\ZZ_{p}/p\ZZ_{p})\cong(\ZZ/p\ZZ)\cong\FF_{p}$. Applying \Cref{lem: Hensel II} repeatedly $p-2$ times, this implies that $x^{p-1}-1$ factors into distinct linear factors in $\ZZ_{p}$. That is, $\ZZ_{p}$ contains $p-1$ $(p-1)$th roots of unity. 
+\end{example}
+This gives a multiplicatively closed set of representatives for the residue classes for the $(p-1)$th roots of unity. Recall here that $\ZZ_{p}$ (uncountable) is much larger than the localizations $\ZZ_{(p)}$ (countable). Similarly if $A/(\pi)\cong\FF_{q}$ for $q$ some prime power then $K=K(A)$ has all $(q-1)$th roots of unity. 
+\\\\
+We are now able to define local fields. 
+\begin{definition}[Local Field]\label{def: local field}
+  Let $K$ be a complete field with discrete valuation $v$ and $A$ its discrete valuation ring. $K$ is a local field if and only if $|A/(\pi)|<\infty$, that is, it has finite residue field. 
+\end{definition}
+Local fields arise in two families: the mixed characteristic case and the equicharacteristic case. 
+\begin{definition}[Mixed Characteristic Local Field]\label{def: mixed characteristic local field}
+  Let $K$ be a local field and $A$ its discrete valuation ring with uniformizer $\pi$. $K$ is a mixed characteristic local field if $\mathrm{char}(K)=0$. 
+\end{definition}
+\begin{remark}
+  In the setting of \Cref{def: mixed characteristic local field}, evidently $\mathrm{char}(A/(\pi))=p$ for some prime $p$ since $K$ is a local field. 
+\end{remark}
+In the setting of \Cref{def: mixed characteristic local field}, $K$ is characteristic 0 so its discrete valuation ring $A$ contains the integers $\ZZ$. So for $\mathrm{char}(A/(\pi))=p$, $p\in A$ where $v(p)\geq 1$ say $v(p)=e$. We thus write $p=\pi^{e}u$ for some unit $u\in A^{\times}$. This leads to the definition of the absolute ramification index. 
+\begin{definition}[Absolute Ramification Index]\label{def: absolute ramification index}
+  Let $K$ be a local field of characteristic 0 with discrete valuation ring $A$ and $\mathrm{char}(A/(\pi))=p$. The absolute ramification index is $v(p)$. 
+\end{definition}
+Note that in the setting above $p$ has positive valuation implying that $A$ contains the $p$-adic integers as well. Let $f=[(A/(\pi)):\ZZ/p\ZZ]$. One can show that $A$ is a free $\ZZ_{p}$-module of rank $ef$ and $[K:\QQ_{p}]=ef$ as well. This is an extension of Dedekind domains where $e$ is the exponent of $(\pi)$ lying over $(p)\subseteq\ZZ$.
+\begin{example}
+  Let $K/\QQ$ be a finite extension of fields unramified at $(p)$ and $\pfrak$ a prime of $\Ocal_{K}$ over $(p)$. The completion of $K_{\pfrak}$ with respect to the $\pfrak$-adic valuation $v_{\pfrak}$ is an absolutely unramified local field.
+\end{example} 
+This seems to suggest that absolutely unramified local fields are plentiful, but the following result shows otherwise. 
+\begin{theorem}\label{thm: unique mixed characteristic extension}
+  For every finite field $\FF_{q}$ of characteristic $p$, there is a complete local field $K$ of characteristic 0 which is absolutely unramified with residue field $\FF_{q}$. 
+\end{theorem}
+\begin{proof}[Proof of Uniqueness]
+  Let $q=p^{f}$ and $\overline{\theta}$ generate $\FF_{q}$ over $\ZZ/p\ZZ$ whose existence is given by the primitive element theorem over finite fields with minimal polynomial $\overline{h}\in \FF_{p}[x]$ of degree $f$. Let $A,A'$ be complete DVRs of characteristic 0 absolutely unramified of characteristic 0 with residue fields $\FF_{q}$. Denoting $K,K'$ the fraction fields of $A,A'$, respectively, $[K:\QQ_{p}]=[K':\QQ_{p}]=f$. Since $\overline{h}$ is minimal, $\overline{\theta}$ is a simple root and applying \Cref{lem: Hensel I}, we can lift it to $\theta\in A$ whose minimal polynomial is $g\in\ZZ_{p}[x]$. Note that $\overline{g}(\overline{\theta})=0$ modulo $(\pi)$ so $\overline{h}|\overline{g}$ so the degree of $g$ is at least $f$, but $K,K'$ are degree $f$ extensions so the degree of $g$ is $f$ as well and $\overline{h}=\overline{g}$ and $K\cong \QQ_{p}[x]/(g(x))$. \\\\
+  In $K'$ consider $g(x)\in A'[x]$ and note that $g$ splits into distinct linear factors over $\FF_{q}[x]$ since $g$ has root $\overline{\theta}\in\FF_{q}$ modulo $(\pi')$ where $\pi'$ is the uniformizer of the DVR $A'$ and $\FF_{q}/\FF_{p}$ is Galois. Applying \Cref{lem: Hensel II}, $g$ factors into distinct linear factors in $A'[x]$ so $K'$ contains a root of $g$ and $[K':\QQ_{p}]=\deg g$. But $g$ was irreducible over $\ZZ_{p}$ as $\overline{g}$ was irreducible over $\FF_{p}[x]$ so $K'\cong\QQ_{p}[x]/(g(x))$ giving the isomorphism.
+\end{proof}
+The proof of existence is \cite[Ch. II, \S 5, Thm. 3]{Serre}. 
+\begin{example}
+  Let $K/\QQ$ be a finite extension of fields with $\pfrak_{1},\pfrak_{2}$ over $(p)\subseteq\ZZ$. If $e_{1}=f_{\pfrak_{1}}=e_{2}=f_{\pfrak_{2}}=1$ then 
+  $$[K_{\pfrak_{1}}:\QQ_{p}]=e_{1}f_{\pfrak_{1}}=1=e_{2}f_{\pfrak_{2}}=[K_{\pfrak_{2}}:\QQ_{p}]$$
+  and $K_{\pfrak_{1}}\cong K_{\pfrak_{2}}\cong\QQ_{p}$. If $e_{1}=e_{2}=1$ and $f_{\pfrak_{1}}=f_{\pfrak_{2}}$ then $K_{\pfrak_{1}}\cong K_{\pfrak_{2}}$
+\end{example}
+\section{Lecture 7 -- 2nd October 2023}
+Recall \Cref{thm: unique mixed characteristic extension} from the previous lecture. We begin with a generalization of this theorem. 
+\begin{theorem}
+  Let $K$ be a complete local field with discrete valuation ring $A$ and $A/(\pi)\cong\FF_{q}$. There is a unique unramified extension $L/K$ of degree $[L:K]=f$ with residue field $\FF_{q^{f}}$. 
+\end{theorem}
+Last time, we saw what the characteristic 0 local fields could be in terms of $p$-adic fields using Hensel's Lemma (\Cref{lem: Hensel I,lem: Hensel II,lem: Hensel III}). However, Hensel's lemma works over any complete local field so the same proof works in this more general setting. We will soon try to understand extensions of arbitrary local fields. Recall that in the setting of a complete local field $K$ with discrete valuation ring $A$ unramified extensions of $K$ correspond bijectively to extensions of the residue field $A/(\pi)$. In the complete setting, the single decomposition group is $\Gal(L/K)$ and we have an isomorphism $\Gal(L/K)\cong\Gal((B/(\pi_{B}))/(A/(\pi_{A})))$. 
+\\\\
+Let $K$ be a characteristic 0 local field. From \Cref{thm: unique mixed characteristic extension}, $K$ is a finite extension of $\QQ_{p}$. If further $e>1$, we can consider the maximal unramified extension $K_{T}$ for $T$ the inertia group. So we have a tower of fields 
+$$% https://q.uiver.app/#q=WzAsMyxbMCwwLCJLIl0sWzAsMSwiS197VH0iXSxbMCwyLCJcXFFRX3twfSJdLFsxLDIsIlxcbWF0aHJte3VucmFtZmllZH0iLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e3JhbWlmaWVkfSIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	K \\
+	{K_{T}} \\
+	{\QQ_{p}}
+	\arrow["{\mathrm{unramfied}}"{description}, no head, from=2-1, to=3-1]
+	\arrow["{\text{ramified}}"{description}, no head, from=1-1, to=2-1]
+\end{tikzcd}$$
+where $K/K_{T}$ is an extension of degree $[K:K_{T}]=e$. By Krasner's Lemma \cite[\href{https://stacks.math.columbia.edu/tag/0BU9}{0BU9}]{stacks-project}, there are only finitely many extensions for given $e$. This gives us great control over the types of local fields that arise. We will soon see the equal characteristic case for local fields, which will eventually lead to a complete classification. 
+\\\\
+Let us now consider the equal characteristic case. 
+\begin{definition}[Equal Characteristic Local Fields]\label{def: equal characteristic local field}
+  Let $K$ be a local field and $A$ its discrete valuation ring. $K$ is an equal characteristic local field if $\mathrm{char}(A/(\pi))=\mathrm{char}(K)$. 
+\end{definition}
+As in the case of \Cref{thm: unique mixed characteristic extension}, we have a classification theorem in the equicharacteristic case. 
+\begin{theorem}
+  If $K$ is a local field of characteristic $p$ with residue field $A/(\pi)\cong\FF_{q}$ for $q$ a $p$-th power, $A\cong\FF_{q}[[T]]$ the power series in $\FF_{q}$ and $K\cong\FF_{q}((T))$ the Laurent series in $\FF_{q}$. 
+\end{theorem}
+\begin{proof}
+  We will find a set $S\subseteq A$ of representatives of the residue field that is additively and multiplicatively closed. The theorem will then follow from 
+\end{proof}
 \newpage
 \printbibliography
 \end{document}

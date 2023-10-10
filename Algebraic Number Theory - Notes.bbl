@@ -54,6 +54,38 @@
       \endverb
       \keyw{11-01,11Rxx,11R04,11R27,11R29,11R37,11R44}
     \endentry
+    \entry{Neukirch}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9dc9a53b50c612ebed946e5825058585}{%
+           family={Neukirch},
+           familyi={N\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Berlin: Springer}%
+      }
+      \strng{namehash}{9dc9a53b50c612ebed946e5825058585}
+      \strng{fullhash}{9dc9a53b50c612ebed946e5825058585}
+      \strng{bibnamehash}{9dc9a53b50c612ebed946e5825058585}
+      \strng{authorbibnamehash}{9dc9a53b50c612ebed946e5825058585}
+      \strng{authornamehash}{9dc9a53b50c612ebed946e5825058585}
+      \strng{authorfullhash}{9dc9a53b50c612ebed946e5825058585}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-540-65399-6}
+      \field{issn}{0072-7830}
+      \field{series}{Grundlehren Math. Wiss.}
+      \field{title}{Algebraic number theory. {Transl}. from the {German} by {Norbert} {Schappacher}}
+      \field{volume}{322}
+      \field{year}{1999}
+      \keyw{11Rxx,11Sxx,11-02,11-01}
+    \endentry
     \entry{Serre}{book}{}
       \name{author}{1}{}{%
         {{hash=523a41970d92b80420ca6d5307619da7}{%
