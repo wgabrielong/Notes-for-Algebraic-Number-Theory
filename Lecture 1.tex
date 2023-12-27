@@ -1,0 +1,88 @@
+\section{Lecture 1 -- 11th September 2023}
+This is a first graduate course in algebraic number theory. We will study local fields. 
+
+Let us understand the what and why of local fields. Local fields are interesting in the context of global fields. Let us consider some examples of global fields. 
+\begin{example}[Number Fields]
+  $K/\QQ$ where $[K:\QQ]<\infty$, finite extensions of $\QQ$. 
+\end{example}
+\begin{example}[Function Fields]
+  Function fields of curves over finite fields $\FF_{q}$. 
+\end{example}
+One's first study of number theory seeks to treat $\ZZ\subseteq\QQ$, but there is a strong analogy between studying $\ZZ\subseteq\QQ$ and $\FF_{q}[t]\subseteq\FF_{q}(t)$. In particular, one can show that there is a bijection betwween smooth geometrically irreducible curves over $\FF_{q}$ up to isomorphism and finite extensions of $\FF_{q}(t)$ up to isomorphism. 
+\begin{example}
+  The field $\FF_{q}(t)$ is the field of rational functions of $\PP^{1}_{\FF_{q}}$. 
+\end{example}
+This is an example of the function field analogy, drawing connections between geometry over finite fields $\FF_{q}$ and $\CC$. In fact, function fields and number fields are the only examples of global fields. This was first studied in the 20th century through the study of class field theory, field extensions with Abelian Galois group, that saw similar methods applied to number fields and function fields of $C_{/\FF_{q}}$. Artin-Whaples axiomatized what was special about function fields and number fields by defining global fields and valuations. This led to a new approach to proving Dirichlet's unit theorem in the 1940s. Valuations will be our starting point for this class. 
+\begin{definition}[Valuation]\label{def:valuation}
+  Let $K$ be a field. A valuation on $K$ is a function $|\cdot|:K\to\RR$ such that: 
+  \begin{enumerate}[label=(\alph*)]
+    \item $|x|\geq0$ for all $x\in K$ and $|x|=0$ if and only if $x=0$, 
+    \item $|xy|=|x|\cdot|y|$, 
+    \item and $|x+y|\leq|x|+|y|$. 
+  \end{enumerate}
+\end{definition}
+Let us consider some valuations of fields. 
+\begin{example}[Trivial Valuation]
+  There is a trivial valuation
+  $$\begin{cases}
+  |x| = 0 & x=0 \\
+  |x| = 1 & x\neq0
+  \end{cases}$$
+  on $K$. 
+\end{example}
+We can see that both $\RR$ and $\CC$ are fields with the ``standard'' valuations. Let $K$ be a number field. $K$ admits homomorphisms to $\RR$ and/or $\CC$ and inherits the absolute value from $\RR$ and/or $\CC$. More precisely, if $[K:\QQ]=n$, there are $n$ homomorphisms to $\CC$ giving $n$ possibly distinct valuations on $K$. 
+\begin{example}
+  The field $\QQ(i)$ is of degree $[\QQ(i):\QQ]=2$. $\QQ(i)$ has two maps to $\CC$, by $i\mapsto i$ and $i\mapsto -i$, each of which defines a norm on $\QQ(i)$. 
+\end{example}
+For any number field, each conjugate of a generator defines a homomorphism to $\CC$. 
+\begin{example}[$\wp$-adic Valuation]
+  Let $K$ be a number field and $\Ocal_{K}$ be its ring of algebraic integers. Let $\wp$ be a prime ideal of $\Ocal_{K}$. For each $x\in K$, $(x)$ is an ideal of $\Ocal_{K}$ admitting a factorization into prime ideals. Write $v_{\wp}(x)$ as the power of $\wp$ in the ideal-factorization of $(x)$. For any constant $c>1$, let $|x|=c^{-v_{\wp}(x)}$ for $x\neq0$ and $|x|=\infty$. 
+\end{example}
+In the $\wp$-adic valuation, things are ``small'' when they are divisible by large $\wp$-powers. In the case of number fields $K$, these are the only types of valuations on $K$. The $\wp$-adic valuation allows us to see primes of a field without passing through any rings. 
+
+One defines a global field by stating that all valuations on the field have some global coherence, wheras in the case of local fields, we are only looking at one prime, that is only one of the valuations of a local field. We will get to the definition of local fields soon. Let us begin with some examples. 
+\begin{example}
+  The real numbers $\RR$. 
+\end{example}
+\begin{example}
+  The complex numbers $\CC$. 
+\end{example}
+\begin{example}
+  Let $p$ be a prime. The $p$-adic numbers $\QQ_{p}$ is a local field. 
+\end{example}
+\begin{exercise}
+  Let $K$ be a number field and $v_{\wp}$ be the valuation with respect to the prime ideal $\wp$. Let $K_{\wp}$ be the completion of $K$ with respect to the metric $v_{\wp}$. $K_{\wp}$ is a local field. 
+\end{exercise}
+In this way, local fields only allow us to see one prime of a global field at a time. Note that $\RR$ arises as a local field via the completion with respect to a metric, as the completion of $\QQ$ with respect to the Euclidean norm. 
+
+There are several connections between local and global fields as statements about global fields can sometimes be reduced to statements about global fields such as via local to global principles. 
+\begin{theorem}[Hasse-Minkowski]
+  Let $Q$ be a quadratic form over a number field $K$. The form $Q$ has a non-trivial solution over $K$ if and only if $Q$ has non-trivial solutions over every completion of $K$. 
+\end{theorem}
+We will study questions like these in the context of local fields. Continuing with our discussion, we can define discrete valuation rings as in \cite[\S 1]{Serre}. We will continue developing the theory as in this text in the coming semester. 
+\begin{definition}[Discrete Valuation]
+  Let $K$ be a field. The field $K$ is discretely valued if there is a surjective homomorphism $v:K^{\times}\to\ZZ$ such that $v(x+y)\geq\min\{v(x),v(y)\}$ and $v(0)=\infty$. 
+\end{definition}
+This allows us to define a Discrete Valuation ring, or DVR. 
+\begin{definition}[DVR]
+  Let $K$ be a field with discrete valuation $v$. Let 
+  $$A=\{x\in K|v(x)\geq0\}$$
+  is a discrete valuation ring with fraction field $K$. 
+\end{definition}
+Let us consider the following examples. 
+\begin{example}
+  Let $K=\QQ$ and $p$ a prime. $A=\ZZ_{(p)}=\{\frac{r}{s}|p\nmid s; r,s\in\ZZ\}\subsetneq\QQ$ is a DVR. 
+\end{example}
+\begin{example}
+  Let $k$ be a field and $k((t))$ be the field of Laurent series on $k$, that is for some $n_{0}>-\infty$, $\sum_{n\geq n_{0}}a_{n}t^{n}$. There is a discrete valuation on the field of Laurent series by
+  $$v\left(\sum_{n\geq n_{0}}a_{n}t^{n}\right)=n_{0}.$$
+  the DVR $A$ here is just the power series on $k$, $k[[t]]$.
+\end{example}
+\begin{definition}[Uniformizer]
+  An element $\pi\in K$ is a uniformizer if $v(\pi)=1$. 
+\end{definition}
+Let us consider the following example.
+\begin{example}
+  Let $\QQ$ be a field endowed with the $p$-adic valuation. All integers with prime $p$ appearing exactly once in the prime factorization is a uniformizer. 
+\end{example}
+Indeed, for $x\in A\setminus\{0\}$, we can write $x=\pi^{n}u$ for some $u\in A^{\times}$. Let $\mfrak=(\pi)=\pi A$ the ideal generated by $\pi$. We can show $\mfrak=\{x\in K|v(x)\geq1\}$ and that $\mfrak$ is a maximal ideal. We define the residue field to be $A/\mfrak$. 

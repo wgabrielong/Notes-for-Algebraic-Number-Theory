@@ -1,0 +1,44 @@
+\section{Lecture 7 -- 2nd October 2023}
+Recall \Cref{thm: unique mixed characteristic extension} from the previous lecture. We begin with a generalization of this theorem. 
+\begin{theorem}
+  Let $K$ be a complete local field with discrete valuation ring $A$ and $A/(\pi)\cong\FF_{q}$. There is a unique unramified extension $L/K$ of degree $[L:K]=f$ with residue field $\FF_{q^{f}}$. 
+\end{theorem}
+Last time, we saw what the characteristic 0 local fields could be in terms of $p$-adic fields using Hensel's Lemma (\Cref{lem: Hensel I,lem: Hensel II,lem: Hensel III}). However, Hensel's lemma works over any complete local field so the same proof works in this more general setting. We will soon try to understand extensions of arbitrary local fields. Recall that in the setting of a complete local field $K$ with discrete valuation ring $A$ unramified extensions of $K$ correspond bijectively to extensions of the residue field $A/(\pi)$. In the complete setting, the single decomposition group is $\Gal(L/K)$ and we have an isomorphism $\Gal(L/K)\cong\Gal((B/(\pi_{B}))/(A/(\pi_{A})))$. 
+\\\\
+Let $K$ be a characteristic 0 local field. From \Cref{thm: unique mixed characteristic extension}, $K$ is a finite extension of $\QQ_{p}$. If further $e>1$, we can consider the maximal unramified extension $K_{T}$ for $T$ the inertia group. So we have a tower of fields 
+$$% https://q.uiver.app/#q=WzAsMyxbMCwwLCJLIl0sWzAsMSwiS197VH0iXSxbMCwyLCJcXFFRX3twfSJdLFsxLDIsIlxcbWF0aHJte3VucmFtZmllZH0iLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e3JhbWlmaWVkfSIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	K \\
+	{K_{T}} \\
+	{\QQ_{p}}
+	\arrow["{\mathrm{unramfied}}"{description}, no head, from=2-1, to=3-1]
+	\arrow["{\text{ramified}}"{description}, no head, from=1-1, to=2-1]
+\end{tikzcd}$$
+where $K/K_{T}$ is an extension of degree $[K:K_{T}]=e$. By Krasner's Lemma \cite[\href{https://stacks.math.columbia.edu/tag/0BU9}{0BU9}]{stacks-project}, there are only finitely many extensions for given $e$. This gives us great control over the types of local fields that arise. We will soon see the equal characteristic case for local fields, which will eventually lead to a complete classification. 
+\\\\
+Let us now consider the equal characteristic case. 
+\begin{definition}[Equal Characteristic Local Fields]\label{def: equal characteristic local field}
+  Let $K$ be a local field and $A$ its discrete valuation ring. $K$ is an equal characteristic local field if $\mathrm{char}(A/(\pi))=\mathrm{char}(K)$. 
+\end{definition}
+As in the case of \Cref{thm: unique mixed characteristic extension}, we have a classification theorem in the equicharacteristic case. 
+\begin{theorem}
+  If $K$ is a local field of characteristic $p$ with residue field $A/(\pi)\cong\FF_{q}$ for $q$ a $p$-th power, $A\cong\FF_{q}[[T]]$ the power series in $\FF_{q}$ and $K\cong\FF_{q}((T))$ the Laurent series in $\FF_{q}$. 
+\end{theorem}
+\begin{proof}
+  We will find a set $S\subseteq A$ of representatives of the residue field that is additively and multiplicatively closed. The theorem will then follow from our power-series characterization.  
+\end{proof}
+\begin{example}
+	If $A/(\pi)\cong\FF_{4}$, and $K\cong\FF_{4}((t))$ the only lift is the constant lift. 
+\end{example}
+\begin{corollary}
+	Any finite extension of $\FF_{q}((t))$ is isomorphic to $\FF_{q^{r}}((s))$ for some $r$. 
+\end{corollary}
+This exhaustively characterizes local fields. 
+\begin{remark}
+	For those who think about the algebraic geometry side of things, this is the analogy of the fact that small analytic neighborhoods of a curve over $\CC$ are all isomorphic. Local fields are local, morally, in the same sense as analytic neighborhoods of complex algebraic curves. 
+\end{remark}
+Unlike $\QQ_{p}\hookrightarrow K$ uniquely/canonically in the mixed characteristic case, there are many morphisms in all degrees $\FF_{q}((t))\to\FF_{q^{r}}((s))$ all of residue field extension $f=r$. For example $t\mapsto s^{k}$ gives a degree $rk$ extension with $e=k$. 
+\\\\
+From the above, we can conclude that the local fields are exactly finite extensions of $\QQ_{p}$ and $\FF_{q}(t)$ for $q$ a prime power. 
+\\\\
+We will see that we can understand them quite explicitly. We first start by understanding their multiplicative groups. 

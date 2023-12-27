@@ -1,0 +1,93 @@
+\section{Lecture 4 -- 20th September 2023}
+We continue our discussion of extensions of Dedekind domains. Let us recall the setup. Let $A$ be a Dedekind domain with fraction field $K$ and $B$ the integral closure of $A$ in $L$, where $L/K$ is a finite extension of fields. By \Cref{thm: integral closure is Dedekind}, $B$ is a Dedekind domain. Let $\pfrak$ be a nonzero prime ideal of $A$. Write $\wp=\pfrak B$ be its ``lift'' in $B$. Since $B$ is Dedekind, $\wp$ admits a unique factorization into prime ideals $\prod_{i}\wp_{i}^{e_{i}}$ finitely many $e_{i}$ nonzero. In such a setting, we write $\wp_{i}|\pfrak$. 
+\begin{definition}[Ramifies]
+  Let $\pfrak\subseteq A$ be an ideal and $\pfrak B=\prod_{i}\wp_{i}^{e_{i}}$ with finitely many $e_{i}$ nonzero. If $e_{i}\geq1$, the ideal $\wp_{i}\subseteq B$ ramifies with ramification index $e_{i}$ in $L/K$. Similarly if $e_{i}\geq 1$ and $\wp_{i}|\pfrak$ for $\pfrak\subseteq A$ then $\pfrak$ ramifies in $A$. 
+\end{definition}
+\begin{proposition}
+  If $\pfrak\subseteq A$ is an ideal and $\pfrak B=\prod_{i}\wp_{i}^{e_{i}}$ with finitely many $e_{i}$ nonzero then $\wp_{i}\cap A=\pfrak$. 
+\end{proposition}
+\begin{proof}
+  We have an injective map of rings $A/(\wp_{i}\cap A)\to B/\wp_{i}$ where $B/\wp_{i}$ is integral as $\wp_{i}$ is prime so we have $\pfrak\subseteq\pfrak B\cap A\subseteq\wp_{i}\cap A$ but since $\pfrak$ is nonzero, $\pfrak=\wp_{i}\cap A$ as desired. 
+\end{proof}
+\begin{definition}[Inertia Degree]
+  Let $\pfrak\subseteq A$ be a nonzero ideal and $\pfrak B=\prod_{i}\wp_{i}^{e_{i}}$ with finitely many $e_{i}$ nonzero with $\pfrak,\wp_{i}$ maximal. We define the inertia degree of $\wp_{i}$ in $L/K$ by $f_{\wp_{i}}=[B/\wp_{i}:A/\pfrak]$.  
+\end{definition}
+\begin{definition}[Split Completely]
+  Let $\pfrak\subseteq A$ be a nonzero ideal and $\pfrak B=\prod_{i}\wp_{i}^{e_{i}}$ with finitely many $e_{i}$ nonzero with $\pfrak,\wp_{i}$ maximal. The ideal $\pfrak$ is split completely if $e_{i}=f_{\wp_{i}}=1$ for all $\wp_{i}$. 
+\end{definition}
+Inertia and ramification degrees are connected in the following way:
+\begin{proposition}
+  Let $\pfrak\subseteq A$ be a nonzero ideal and $\pfrak B=\prod_{i}\wp_{i}^{e_{i}}$ with finitely many $e_{i}$ nonzero. Under the conditions of Serre's Hypothesis F, where $B$ is a finitely generated $A$-module, $[L:K]=\sum_{\wp_{i}}e_{i}f_{\wp_{i}}$. 
+\end{proposition}
+\begin{proof}
+  This is \cite[Ch. 1, \S 4, Proposition 10]{Serre}. 
+\end{proof}
+Note that without Serre's Hypothesis F, we only have the inequality $[L:K]\geq\sum_{\wp_{i}}e_{i}f_{\wp_{i}}$. \\\\
+For $A$ a Dedekind domain, the set of fractional ideals of $A$ forms a group in a natural way which we denote $I_{A}$. For $B$ the integral closure of $A$, we can define a map $I_{B}\to I_{A}$ using the relative ideal norm as follows. 
+\begin{definition}[Relative Ideal Norm]
+  Let $A\subseteq B$ be Dedekind domains. The relative ideal norm $\Nm_{B/A}:I_{B}\to I_{A}$ is defined by $\wp\mapsto(\wp\cap A)^{f_{\wp}}$. 
+\end{definition}
+The relative ideal norm and the norm on elements are related in the following way. 
+\begin{proposition}
+  If $x\in L$ then $\Nm_{B/A}(xB)=\Nm_{L/K}(x)A$. 
+\end{proposition}
+If further $L/K$ is a Galois extension, there is an action by $\Gal(L/K)$ on the primes $\wp_{i}\subseteq B$ over $\pfrak\subseteq A$. 
+\begin{proposition}\label{prop: transitive Galois EDD}
+  Let $A$ be a Dedekind domain with fraction field $K$, $L/K$ a Galois extension of field with $B$ the integral closure of $A$ in $L$, and $\pfrak\subseteq A$ nonzero. The Galois group $\Gal(L/K)$ acts transitively on $\wp\subseteq B$ for $\wp|\pfrak$. 
+\end{proposition}
+\begin{proof}
+  Let $\wp|\pfrak, \wp'|\pfrak$ and suppose $\wp,\wp'$ do not lie in the same Galois orbit. Applying the Chinese remainder theorem, we can find $b\in\wp$ scu that $b\notin\sigma(\wp')$, that is, $b$ does not lie in any Galois orbit of $\wp'$. We thus have $\sigma^{-1}(b)\notin\wp$ for any $\sigma\in\Gal(L/K)$. So on one hand $\Nm_{L/K}(b)\in\wp$ and computing by $\Nm_{L/K}(b)=\prod_{\sigma\in\Gal(L/K)}\sigma^{-1}(b)$ is not in $\wp'$ contradicting $\wp'\cap A=\wp\cap A$. 
+\end{proof}
+One then deduces the following corollary. 
+\begin{corollary}
+  In the setting of \Cref{prop: transitive Galois EDD}, $e_{i}=e_{j}$ and $f_{\wp_{i}}=f_{\wp_{j}}$. 
+\end{corollary}
+We now introduce two important subgroups of the Galois group of $L/K$, the decomposition group and the inertia group. These groups allow us to better understand the Galois group as a whole. 
+\begin{definition}[Decomposition Group]
+  Let $\wp|\pfrak$ for $\pfrak\subseteq A,\wp\subseteq B$ nonzero. The decomposition group of $\wp$ denoted $D_{\wp}$ is the subgroup of the Galois group $\Gal(L/K)$ stabilizing $\wp$. 
+\end{definition}
+By \Cref{prop: transitive Galois EDD} and our first course in the theory of groups $D_{\wp}$ and $D_{\wp'}$ are conjugate subgroups of $\Gal(L/K)$. Conversely, if $D_{\wp}, D_{\wp'}$ are conjugate subgroups of $\Gal(L/K)$, then they are decomposition groups for ideals $\wp|\pfrak, \wp'|\pfrak$. So each $\pfrak\subseteq A$ determines a conjugacy class of subgroups of $\Gal(L/K)$ which correspond to decomposition groups of ideals $\wp|\pfrak$. By the orbit-stabilizer theorem $|D|=ef=\frac{n}{r}$ where $n=[L:K]$ and $r$ is the number of primes of $B$ lying over $\pfrak\subseteq A$. Note that given a decomposition group $D$, we can consider the subfield of $L$ fixed by $D$ which we denote $K_{D}$ where $K\subseteq K_{D}\subseteq L$. One applies the orbit-stabilizer theorem once again to see that $[K_{D}:K]=r, [L:K_{D}]=ef$. Furthermore, one can show that all factorizations of $\pfrak$ into distinct primes occurs in $K_{D}$. 
+\\\\
+If $A/\pfrak$ is finite (which holds for our cases of interest), the decomposition group $D$ acts on $B/\wp$ fixing $A/\pfrak$ inducing a map $\phi:D\to\Gal((B/\wp)/(A/\pfrak))$. We define the kernel of this map to be the inertia group. 
+\begin{definition}[Inertia Group]
+  Let $\wp|\pfrak$ for $\pfrak\subseteq A,\wp\subseteq B$ nonzero with$A/\pfrak$ finite and $D_{\wp}$ the decomposition group of $\wp$. The inertia group of $\wp$ denoted $T_{\wp}$ is the kernel of the map $\phi:D\to\Gal((B/\wp)/(A/\pfrak))$. 
+\end{definition}
+The inertia group is the set of elements of $D$ that fix $B/\wp$ pointwise. We can think of it as the set of things that $B/\wp$ cannot see. As in the case of the decomposition group, we can define a field $K_{T}$ the subfield of $L$ fixed by the inertia group $T$. 
+\begin{proposition}\label{prop:D/P is Galois group}
+  Let $\wp|\pfrak$ for $\pfrak\subseteq A,\wp\subseteq B$ nonzero with $A/\pfrak$ finite, $D_{\wp}$ the decomposition group of $\wp$, and $T_{\wp}$ the inertia group of $\wp$. The map $D_{\wp}/T_{\wp}\to\Gal((B/\wp)/(A/\pfrak))$ is an isomorphism. 
+\end{proposition}
+\begin{proof}[Proof Outline]
+  By the first isomorphism theorem for groups, it suffices to show that $\phi:D\to\Gal((B/\wp)/(A/\pfrak))$ is surjective. We can find an element $\sigma\in\Gal(L/K)$ mapping an element to each conjugate by comparing minimal polynomials of elements in $B$ and $B/\wp$. 
+\end{proof}
+From \Cref{prop:D/P is Galois group}, we see that $|T|=e$. 
+\begin{remark}
+  The inertia group $T$ is a misleading name as it controls the ramification of primes. This is the first example of the higher ramification groups that we will see later in the course. Moreover, under the assumptions above, we are considering a finite field extension over a finite field, which is well understood. 
+\end{remark}
+\begin{proposition}
+  Let $L/K$ be a Galois extension. If $L/K$ is unramified at $\wp\subseteq B$, then $D=\Gal((B/\wp)/(A/\pfrak))$ and $D$ is generated by the Frobenius element $\Frob_{\wp}\in D$ where $\Frob_{\wp}:B/\wp\to B/\wp$ by $x\mapsto x^{|A/\pfrak|}$. 
+\end{proposition}
+We will often use the actions of these groups on $L/K$ and $B/\wp,A/\pfrak$ in our study of local fields. 
+\begin{example}
+  Let $A=\ZZ, K=\QQ, L=\QQ(\zeta_{n})$ where $\zeta_{n}$ is a primitive $n$-th root of unity. Recall here that $\Gal(L/K)\cong(\ZZ/n\ZZ)^{\times}$ where the isomorphism is by $u\mapsto \zeta_{n}^{u}$. One can check using discriminants that if $p\nmid n$ a positive prime, it is unramified and $\Frob_{p}$ is the image of $p$ in the map $(\ZZ/n\ZZ)^{\times}\to\Gal(L/K)$. Indeed, infinitely many $p$ in each least residue class $(\ZZ/n\ZZ)^{\times}$ $\Frob_{p}$ generates the Galois group. 
+\end{example}
+\begin{remark}
+  The order of the Frobenius element $\Frob_{\wp}$ is $f_{\wp}$. 
+\end{remark}
+In the setting of non-Galois extensions, we can take the Galois closure and use these groups in the ways we described above. 
+\begin{proposition}[={\cite[Ch. 1, \S7, Prop. 22]{Serre}}]
+  Suppose we have a tower of field with their integral closures 
+  $$% https://q.uiver.app/#q=WzAsNixbMCwwLCJDIl0sWzAsMSwiQiJdLFswLDIsIkEiXSxbMSwyLCJLIl0sWzEsMSwiTCJdLFsxLDAsIk0iXSxbMCw1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwwLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsNCwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNCw1LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==
+  \begin{tikzcd}
+    C & M \\
+    B & L \\
+    A & K
+    \arrow[hook, from=1-1, to=1-2]
+    \arrow[hook, from=2-1, to=2-2]
+    \arrow[hook, from=3-1, to=3-2]
+    \arrow[hook, from=2-1, to=1-1]
+    \arrow[hook, from=3-1, to=2-1]
+    \arrow[hook, from=3-2, to=2-2]
+    \arrow[hook, from=2-2, to=1-2]
+  \end{tikzcd}$$
+  we have $D_{\wp}(M/L)=D_{\wp}(M/K)\cap\Gal(M/L)$ and $T_{\wp}(M/L)=T_{\wp}(M/K)\cap\Gal(M/L)$ for $p\subseteq A, \pfrak\subseteq B, \wp\subseteq C$ and $\wp|\pfrak, \pfrak|p$. 
+\end{proposition}
