@@ -6,4 +6,16 @@
 \contentsline {section}{\tocsection {}{5}{Lecture 5 -- 25th September 2023}}{16}{section.5}%
 \contentsline {section}{\tocsection {}{6}{Lecture 6 -- 27th September 2023}}{19}{section.6}%
 \contentsline {section}{\tocsection {}{7}{Lecture 7 -- 2nd October 2023}}{22}{section.7}%
-\contentsline {section}{\tocsection {}{}{References}}{24}{section*.3}%
+\contentsline {section}{\tocsection {}{8}{Lecture 8 -- 4th October 2023}}{24}{section.8}%
+\contentsline {section}{\tocsection {}{9}{Lecture 9 -- 11th October 2023}}{25}{section.9}%
+\contentsline {section}{\tocsection {}{10}{Lecture 10 -- 16th October 2023}}{26}{section.10}%
+\contentsline {section}{\tocsection {}{11}{Lecture 11 -- 18th October 2023}}{27}{section.11}%
+\contentsline {section}{\tocsection {}{12}{Lecture 12 -- 23rd October 2023}}{28}{section.12}%
+\contentsline {section}{\tocsection {}{13}{Lecture 13 -- 25th October 2023}}{29}{section.13}%
+\contentsline {section}{\tocsection {}{14}{Lecture 14 -- 30th October 2023}}{30}{section.14}%
+\contentsline {section}{\tocsection {}{15}{Lecture 15 -- 1st November 2023}}{31}{section.15}%
+\contentsline {section}{\tocsection {}{16}{Lecture 18 -- 13th November 2023}}{32}{section.16}%
+\contentsline {section}{\tocsection {}{17}{Lecture 19 -- 15th November 2023}}{33}{section.17}%
+\contentsline {section}{\tocsection {}{18}{Lecture 20 -- 20th November 2023}}{34}{section.18}%
+\contentsline {section}{\tocsection {}{19}{Lecture 21 -- 27th November 2023}}{35}{section.19}%
+\contentsline {section}{\tocsection {}{}{References}}{36}{section*.3}%
